@@ -20,7 +20,7 @@ export interface Product {
 
 export interface ProductsResponse {
   products: Product[];
-  total: number;
-  skip: number;
-  limit: number;
+  total: number;  // Total de registros
+  skip: number; // productos omitidos
+  limit: number; // Tamaño de la página
 }

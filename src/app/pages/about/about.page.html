@@ -4,6 +4,11 @@
       <ion-back-button defaultHref="/inicio"></ion-back-button>
     </ion-buttons>
     <ion-title>Sobre Nosotros (About)</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleTheme()" fill="solid" color="primary" style="margin-right: 12px; font-weight: bold;">
+        {{ isDarkMode ? '☀️ Modo Claro' : '🌙 Modo Oscuro' }}
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -27,12 +32,12 @@
           Somos una empresa de consultoría tecnológica y desarrollo de software especializada en la creación de aplicaciones multiplataforma con <strong>Ionic</strong> y <strong>Angular Standalone</strong>.
         </p>
 
-        <p style="line-height: 1.6; margin-bottom: 20px; color: var(--ion-color-step-600, #a0aec0);">
+        <p style="line-height: 1.6; margin-bottom: 20px;">
           Nuestra misión es ofrecer soluciones digitales eficientes, accesibles y de alto rendimiento que integren servicios REST de forma reactiva, garantizando la mejor experiencia de usuario en dispositivos móviles y web.
         </p>
 
         <div style="background: rgba(var(--ion-color-primary-rgb, 56, 128, 255), 0.1); border-left: 4px solid var(--ion-color-primary); padding: 14px; border-radius: 4px; margin-bottom: 24px;">
-          <strong>Perfil del Desarrollador:</strong> José Ignacio — Ciclo DAM2 / Desarrollo de Interfaces.
+          <strong>Perfil del Desarrollador:</strong> Alejandro — Ciclo DAM2 / Desarrollo de Interfaces.
         </div>
 
         <div style="display: flex; gap: 12px; flex-wrap: wrap;">

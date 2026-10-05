@@ -3,6 +3,11 @@
     <ion-title>
       Inicio
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleTheme()" fill="solid" color="primary" style="margin-right: 12px; font-weight: bold;">
+        {{ isDarkMode ? '☀️ Modo Claro' : '🌙 Modo Oscuro' }}
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 

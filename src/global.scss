@@ -1,12 +1,6 @@
 /*
  * App Global CSS
  * ----------------------------------------------------------------------------
- * Put style rules here that you want to apply globally. These styles are for
- * the entire app and not just one component. Additionally, this file can be
- * used as an entry point to import other CSS/Sass files to be included in the
- * output CSS.
- * For more information on global stylesheets, visit the documentation:
- * https://ionicframework.com/docs/layout/global-stylesheets
  */
 
 /* Core CSS required for Ionic components to work properly */
@@ -18,7 +12,7 @@
 @import "@ionic/angular/css/typography.css";
 @import "@ionic/angular/css/display.css";
 
-/* Optional CSS utils that can be commented out */
+/* Optional CSS utils */
 @import "@ionic/angular/css/padding.css";
 @import "@ionic/angular/css/float-elements.css";
 @import "@ionic/angular/css/text-alignment.css";
@@ -26,12 +20,47 @@
 @import "@ionic/angular/css/flex-utils.css";
 
 /**
- * Ionic Dark Mode
- * -----------------------------------------------------
- * For more info, please see:
- * https://ionicframework.com/docs/theming/dark-mode
+ * Ionic Dark Mode - Clases
  */
+@import "@ionic/angular/css/palettes/dark.class.css";
 
-/* @import "@ionic/angular/css/palettes/dark.always.css"; */
-/* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+/* Estilos de compatibilidad para modo claro y oscuro en tablas y textos */
+html:not(.ion-palette-dark),
+body:not(.ion-palette-dark) {
+  --ion-background-color: #ffffff;
+  --ion-text-color: #1a202c;
+  background-color: #ffffff;
+  color: #1a202c;
+
+  table {
+    color: #1a202c;
+    th, td {
+      border-bottom: 1px solid #e2e8f0;
+    }
+  }
+
+  .pagination-bar {
+    background: #edf2f7 !important;
+    color: #2d3748 !important;
+  }
+}
+
+html.ion-palette-dark,
+body.ion-palette-dark {
+  --ion-background-color: #121212;
+  --ion-text-color: #f7fafc;
+  background-color: #121212;
+  color: #f7fafc;
+
+  table {
+    color: #f7fafc;
+    th, td {
+      border-bottom: 1px solid #2d3748;
+    }
+  }
+
+  .pagination-bar {
+    background: #1a202c !important;
+    color: #f7fafc !important;
+  }
+}

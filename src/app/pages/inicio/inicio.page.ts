@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {
   IonHeader,
   IonToolbar,
   IonTitle,
   IonContent,
-  IonButton
+  IonButton,
+  IonButtons
 } from '@ionic/angular';
 import { RouterLink } from '@angular/router';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-inicio',
@@ -19,8 +21,18 @@ import { RouterLink } from '@angular/router';
     IonTitle,
     IonContent,
     IonButton,
+    IonButtons,
     RouterLink
   ]
 })
 export class InicioPage {
+  themeService = inject(ThemeService);
+
+  get isDarkMode(): boolean {
+    return this.themeService.isDarkMode;
+  }
+
+  toggleTheme(): void {
+    this.themeService.toggleTheme();
+  }
 }

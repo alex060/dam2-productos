@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import {
   IonHeader,
@@ -12,9 +12,9 @@ import {
   IonCardTitle,
   IonCardSubtitle,
   IonCardContent,
-  IonButton,
-  IonIcon
+  IonButton
 } from '@ionic/angular';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-about',
@@ -39,5 +39,14 @@ import {
 })
 export class AboutPage {
   companyName = 'DAM2 Tech Solutions';
-  githubUrl = 'https://github.com/josei';
+  githubUrl = 'https://github.com/alex060';
+  themeService = inject(ThemeService);
+
+  get isDarkMode(): boolean {
+    return this.themeService.isDarkMode;
+  }
+
+  toggleTheme(): void {
+    this.themeService.toggleTheme();
+  }
 }
