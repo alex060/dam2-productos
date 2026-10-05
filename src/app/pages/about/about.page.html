@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Sobre Nosotros (About)</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div style="max-width: 800px; margin: 0 auto;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+      <h1>Acerca de la Empresa</h1>
+      <ion-button routerLink="/inicio" fill="outline">
+        ← Volver a Inicio
+      </ion-button>
+    </div>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Desarrollo de Interfaces DAM2</ion-card-subtitle>
+        <ion-card-title>{{ companyName }}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 16px;">
+          Somos una empresa de consultoría tecnológica y desarrollo de software especializada en la creación de aplicaciones multiplataforma con <strong>Ionic</strong> y <strong>Angular Standalone</strong>.
+        </p>
+
+        <p style="line-height: 1.6; margin-bottom: 20px; color: var(--ion-color-step-600, #a0aec0);">
+          Nuestra misión es ofrecer soluciones digitales eficientes, accesibles y de alto rendimiento que integren servicios REST de forma reactiva, garantizando la mejor experiencia de usuario en dispositivos móviles y web.
+        </p>
+
+        <div style="background: rgba(var(--ion-color-primary-rgb, 56, 128, 255), 0.1); border-left: 4px solid var(--ion-color-primary); padding: 14px; border-radius: 4px; margin-bottom: 24px;">
+          <strong>Perfil del Desarrollador:</strong> José Ignacio — Ciclo DAM2 / Desarrollo de Interfaces.
+        </div>
+
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <ion-button [href]="githubUrl" target="_blank" rel="noopener noreferrer" color="primary">
+            🌐 Ver Perfil de GitHub
+          </ion-button>
+          <ion-button routerLink="/productos" fill="solid" color="secondary">
+            📦 Ver Catálogo de Productos
+          </ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
